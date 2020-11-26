@@ -1,0 +1,170 @@
+@import "./variables";
+@import "./mixins";
+
+.nav {
+  background-color: #24292e;
+  padding: 15px;
+  a {
+    color: #ffffff;
+    margin: auto 0;
+    text-decoration: none;
+    &:hover {
+      text-decoration: none;
+      color: hsla(0, 0%, 100%, 0.7);
+    }
+  }
+  //mobile nav view
+  .mob-view {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    color: #ffffff;
+    @include responsive($md) {
+      display: none;
+    }
+    .fas,
+    .fab {
+      font-size: 200%;
+    }
+  }
+  //pc nav view
+  .pc-view {
+    display: none;
+    @include responsive($md) {
+      display: flex;
+      flex-flow: row nowrap;
+    }
+    .fab {
+      font-size: 200%;
+    }
+    .search-group {
+      margin: auto 10px;
+      width: 300px;
+      height: 30px;
+      position: relative;
+      @include responsive($lg) {
+        margin: auto 15px;
+      }
+      #pc-search {
+        width: 100%;
+        height: 100%;
+        &:focus + .slash {
+          position: relative;
+          display: none;
+        }
+      }
+      .slash {
+        position: absolute;
+        background: transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 4px;
+        right: 8px;
+        border: 1px solid #9b9b9b;
+        border-radius: 5px;
+        color: #9b9b9b;
+        width: 20px;
+        height: 20px;
+      }
+    }
+    .nav-link {
+      margin: auto 5px;
+      font-size: 14px;
+      font-weight: 500;
+      @include responsive($lg) {
+        margin: auto 10px;
+      }
+      &:nth-child(3):after {
+        content: "Pulls";
+        @include responsive($lg) {
+          content: "Pull requests";
+        }
+      }
+    }
+    .end {
+      margin-left: auto;
+      display: flex;
+      flex-flow: row nowrap;
+      .nav-link-end {
+        margin: auto 5px;
+        font-size: 14px;
+        color: #ffffff;
+        display: flex;
+        @include responsive($lg) {
+          margin: auto 10px;
+        }
+        &:hover {
+          cursor: pointer;
+          color: hsla(0, 0%, 100%, 0.7);
+        }
+        .avi {
+          border-radius: 100%;
+          width: 25px;
+          height: 25px;
+          margin: auto 0;
+          align-self: baseline;
+        }
+        .fa-caret-down {
+          align-self: center;
+          margin: 0 3px;
+        }
+      }
+    }
+  }
+}
+
+//nav search input
+.nav-search {
+  background: transparent;
+  border: 1px solid #9b9b9b;
+  border-radius: 5px;
+  color: #f6f8fa;
+  &:focus {
+    border: 1px solid blue;
+    outline: none;
+  }
+  &::placeholder {
+    color: #cfcece;
+  }
+}
+
+//toggled mobile nav
+.mob-nav {
+  display: none;
+  padding: 1px 15px;
+  background-color: #24292e;
+  #mob-search {
+    width: 100%;
+    height: 30px;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    li {
+      border-top: 1px solid #9b9b9b;
+      color: #ffffff;
+      padding: 10px 0;
+      font-weight: 500;
+      display: flex;
+      .avi {
+        border-radius: 100%;
+        width: 20px;
+        height: 20px;
+        margin: auto 0;
+        align-self: baseline;
+      }
+    }
+  }
+}
+
+.mob-nav.show {
+  @include responsive($md) {
+    display: none;
+  }
+}
+
+.show {
+  display: block;
+}
