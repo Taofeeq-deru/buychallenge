@@ -1,0 +1,257 @@
+.nav {
+  background-color: #24292e;
+  padding: 15px;
+}
+
+.nav a {
+  color: #ffffff;
+  margin: auto 0;
+  text-decoration: none;
+}
+
+.nav a:hover {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.nav .mob-view {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #ffffff;
+}
+
+@media screen and (min-width: 40em) {
+  .nav .mob-view {
+    display: none;
+  }
+}
+
+.nav .mob-view .fas,
+.nav .mob-view .fab {
+  font-size: 200%;
+}
+
+.nav .pc-view {
+  display: none;
+}
+
+@media screen and (min-width: 40em) {
+  .nav .pc-view {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+  }
+}
+
+.nav .pc-view .fab {
+  font-size: 200%;
+}
+
+.nav .pc-view .search-group {
+  margin: auto 10px;
+  width: 300px;
+  height: 30px;
+  position: relative;
+}
+
+@media screen and (min-width: 60em) {
+  .nav .pc-view .search-group {
+    margin: auto 15px;
+  }
+}
+
+.nav .pc-view .search-group #pc-search {
+  width: 100%;
+  height: 100%;
+}
+
+.nav .pc-view .search-group #pc-search:focus + .slash {
+  position: relative;
+  display: none;
+}
+
+.nav .pc-view .search-group .slash {
+  position: absolute;
+  background: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 4px;
+  right: 8px;
+  border: 1px solid #9b9b9b;
+  border-radius: 5px;
+  color: #9b9b9b;
+  width: 20px;
+  height: 20px;
+}
+
+.nav .pc-view .nav-link {
+  margin: auto 5px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+@media screen and (min-width: 60em) {
+  .nav .pc-view .nav-link {
+    margin: auto 10px;
+  }
+}
+
+.nav .pc-view .nav-link:nth-child(3):after {
+  content: "Pulls";
+}
+
+@media screen and (min-width: 60em) {
+  .nav .pc-view .nav-link:nth-child(3):after {
+    content: "Pull requests";
+  }
+}
+
+.nav .pc-view .end {
+  margin-left: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+}
+
+.nav .pc-view .end .nav-link-end {
+  margin: auto 5px;
+  font-size: 14px;
+  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media screen and (min-width: 60em) {
+  .nav .pc-view .end .nav-link-end {
+    margin: auto 10px;
+  }
+}
+
+.nav .pc-view .end .nav-link-end:hover {
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.nav .pc-view .end .nav-link-end .avi {
+  border-radius: 100%;
+  width: 25px;
+  height: 25px;
+  margin: auto 0;
+  -ms-flex-item-align: baseline;
+      align-self: baseline;
+}
+
+.nav .pc-view .end .nav-link-end .fa-caret-down {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin: 0 3px;
+}
+
+.nav-search {
+  background: transparent;
+  border: 1px solid #9b9b9b;
+  border-radius: 5px;
+  color: #f6f8fa;
+}
+
+.nav-search:focus {
+  border: 1px solid blue;
+  outline: none;
+}
+
+.nav-search::-webkit-input-placeholder {
+  color: #cfcece;
+}
+
+.nav-search:-ms-input-placeholder {
+  color: #cfcece;
+}
+
+.nav-search::-ms-input-placeholder {
+  color: #cfcece;
+}
+
+.nav-search::placeholder {
+  color: #cfcece;
+}
+
+.mob-nav {
+  display: none;
+  padding: 1px 15px;
+  background-color: #24292e;
+}
+
+.mob-nav #mob-search {
+  width: 100%;
+  height: 30px;
+}
+
+.mob-nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.mob-nav ul li {
+  border-top: 1px solid #9b9b9b;
+  color: #ffffff;
+  padding: 10px 0;
+  font-weight: 500;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.mob-nav ul li .avi {
+  border-radius: 100%;
+  width: 20px;
+  height: 20px;
+  margin: auto 0;
+  -ms-flex-item-align: baseline;
+      align-self: baseline;
+}
+
+@media screen and (min-width: 40em) {
+  .mob-nav.show {
+    display: none;
+  }
+}
+
+.show {
+  display: block;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+input {
+  padding-left: 8px;
+}
+/*# sourceMappingURL=style.css.map */
