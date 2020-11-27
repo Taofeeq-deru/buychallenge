@@ -875,12 +875,16 @@
   color: #24292e;
   font-size: 16px;
   width: 80%;
-  margin-top: 0;
 }
 
-#content .bio .desc p {
-  margin-top: 0;
-  padding-top: 0;
+@media screen and (min-width: 40em) {
+  #content .bio .desc {
+    margin-top: 0;
+  }
+  #content .bio .desc p {
+    margin-top: 0;
+    padding-top: 0;
+  }
 }
 
 #content .mobile-tabs {
