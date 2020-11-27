@@ -30,7 +30,7 @@
             class="nav-search"
             placeholder="Search or jump to..."
           />
-          <div class="slash">/</div>
+          <div class="slash"><span>/</span></div>
         </div>
         <a href="" class="nav-link"></a>
         <a href="" class="nav-link">Issue</a>
@@ -38,16 +38,55 @@
         <a href="" class="nav-link">Explore</a>
         <div class="end">
           <a href="" class="nav-link-end"><i class="far fa-bell"></i></a>
-          <div class="nav-link-end">
+          <div class="nav-link-end dd-toggler" data-dd="repo-dd">
             <i class="fas fa-plus"></i> <i class="fas fa-caret-down"></i>
           </div>
-          <div class="nav-link-end">
+          <div class="nav-link-end dd-toggler" data-dd="profile-dd">
             <img src="./avi.jpg" alt="Taofeeq-deru" class="avi" />
             <i class="fas fa-caret-down"></i>
           </div>
         </div>
       </div>
     </nav>
+    <div id="repo-dd" class="dropdown">
+      <div class="triangle"></div>
+      <div class="dd-menu">
+        <a href="">New repository</a>
+        <a href="">Import repository</a>
+        <a href="">New gist</a>
+        <a href="">New organization</a>
+        <a href="">New project</a>
+      </div>
+    </div>
+    <div id="profile-dd" class="dropdown">
+      <div class="triangle"></div>
+      <div class="dd-menu">
+        <a href="" class="signed-in"
+          >Signed in as <br /><span>Taofeeq-deru</span></a
+        >
+        <div class="status-box">
+          <div class="set-status">
+            <i class="far fa-smile"></i>
+            <p>Set status</p>
+          </div>
+        </div>
+        <div class="profile-links">
+          <a href="">Your profile</a>
+          <a href="">Your repositories</a>
+          <a href="">Your organisations</a>
+          <a href="">Your projects</a>
+          <a href="">Your stars</a>
+          <a href="">Your gists</a>
+        </div>
+        <div class="others">
+          <a href="">Upgrade</a>
+          <a href="">Feature preview</a>
+          <a href="">Help</a>
+          <a href="">Settings</a>
+          <a href="">Sign out</a>
+        </div>
+      </div>
+    </div>
     <!--mobile nav-->
     <div class="mob-nav" id="mobile-nav">
       <input
@@ -121,6 +160,10 @@
             <div class="avi-names">
               <div class="avi">
                 <img src="./avi.jpg" alt="Taofeeq-deru" class="avatar" />
+                <div class="set-status-pc">
+                  <i class="far fa-smile"></i>
+                  <p>Set status</p>
+                </div>
               </div>
               <div class="names" id="bio-name">
                 <h1>Taofeeq Oluderu</h1>
@@ -154,35 +197,51 @@
               placeholder="Find a repository..."
             />
             <div class="details">
-              <details>
+              <details data-id>
                 <summary>
-                  <span>Type:</span>&nbsp;All <i class="fas fa-caret-down"></i>
+                  <span>Type:</span>&nbsp;Public
+                  <i class="fas fa-caret-down"></i>
                 </summary>
-                <div class="details-menu">
-                  <p class="title">Select type</p>
-                  <p><i class="fas fa-check"></i> All</p>
-                  <p><i class="fas fa-check inactive"></i> Public</p>
-                  <p><i class="fas fa-check inactive"></i> Private</p>
-                  <p><i class="fas fa-check inactive"></i> Sources</p>
-                  <p><i class="fas fa-check inactive"></i> Forks</p>
-                  <p><i class="fas fa-check inactive"></i> Archived</p>
+                <div class="menu">
+                  <div class="details-menu">
+                    <p class="title">
+                      Select type
+                      <span class="close-detail" role="button">&times;</span>
+                    </p>
+                    <div class="menu-list">
+                      <p><i class="fas fa-check inactive"></i> All</p>
+                      <p><i class="fas fa-check"></i> Public</p>
+                      <p><i class="fas fa-check inactive"></i> Private</p>
+                      <p><i class="fas fa-check inactive"></i> Sources</p>
+                      <p><i class="fas fa-check inactive"></i> Forks</p>
+                      <p><i class="fas fa-check inactive"></i> Archived</p>
+                      <p><i class="fas fa-check inactive"></i> Mirrors</p>
+                    </div>
+                  </div>
                 </div>
               </details>
-              <details class="lang">
+              <details class="lang" data-id>
                 <summary>
                   <span>Language:</span>&nbsp;All
                   <i class="fas fa-caret-down"></i>
                 </summary>
-                <div class="details-menu">
-                  <p class="title">Select language</p>
-                  <p><i class="fas fa-check"></i> All</p>
-                  <p><i class="fas fa-check inactive"></i> JavaScript</p>
-                  <p><i class="fas fa-check inactive"></i> SCSS</p>
-                  <p><i class="fas fa-check inactive"></i> HTML</p>
-                  <p><i class="fas fa-check inactive"></i> PHP</p>
-                  <p><i class="fas fa-check inactive"></i> Python</p>
-                  <p><i class="fas fa-check inactive"></i> TypeScript</p>
-                  <p><i class="fas fa-check inactive"></i> CSS</p>
+                <div class="menu">
+                  <div class="details-menu">
+                    <p class="title">
+                      Select language
+                      <span class="close-detail" role="button">&times;</span>
+                    </p>
+                    <div class="menu-list">
+                      <p><i class="fas fa-check"></i> All</p>
+                      <p><i class="fas fa-check inactive"></i> JavaScript</p>
+                      <p><i class="fas fa-check inactive"></i> SCSS</p>
+                      <p><i class="fas fa-check inactive"></i> HTML</p>
+                      <p><i class="fas fa-check inactive"></i> PHP</p>
+                      <p><i class="fas fa-check inactive"></i> Python</p>
+                      <p><i class="fas fa-check inactive"></i> TypeScript</p>
+                      <p><i class="fas fa-check inactive"></i> CSS</p>
+                    </div>
+                  </div>
                 </div>
               </details>
               <button class="btn-new">
@@ -199,9 +258,8 @@
           <div class="repo-list">
             <div class="repo">
               <div class="name-lang">
-                <div class="name-type">
+                <div class="name">
                   <a href="">washryte</a>
-                  <span class="type">Private</span>
                 </div>
                 <p class="detail">A laundromat</p>
                 <div class="lang-updated">
@@ -222,7 +280,7 @@
             </div>
             <div class="repo">
               <div class="name-lang">
-                <div class="name-type">
+                <div class="name">
                   <a href="">detty-dec</a>
                 </div>
                 <p class="forked">
@@ -247,7 +305,7 @@
             </div>
             <div class="repo">
               <div class="name-lang">
-                <div class="name-type">
+                <div class="name">
                   <a href="">weaterApp</a>
                 </div>
                 <p class="detail">Simple weather map</p>
@@ -264,7 +322,7 @@
             </div>
             <div class="repo">
               <div class="name-lang">
-                <div class="name-type">
+                <div class="name">
                   <a href="">django</a>
                 </div>
                 <div class="lang-updated">
@@ -280,7 +338,7 @@
             </div>
             <div class="repo">
               <div class="name-lang">
-                <div class="name-type">
+                <div class="name">
                   <a href="">ant-design</a>
                 </div>
                 <p class="forked">
@@ -304,9 +362,8 @@
             </div>
             <div class="repo">
               <div class="name-lang">
-                <div class="name-type">
+                <div class="name">
                   <a href="">team-4</a>
-                  <span class="type">Private</span>
                 </div>
                 <p class="forked">
                   Forked from <a href="#" class="link">bla bla </a>
@@ -349,6 +406,6 @@
       </div>
     </footer>
 
-    <script src="scripts/script.js"></script>
+    <script src="scripts/others.js"></script>
   </body>
 </html>

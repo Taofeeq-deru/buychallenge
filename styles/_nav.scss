@@ -3,7 +3,10 @@
 
 .nav {
   background-color: $dark-sec;
-  padding: 15px;
+  padding: 17px 20px;
+  @include responsive($md) {
+    padding: 17px 23px;
+  }
   a {
     color: $white;
     margin: auto 0;
@@ -64,6 +67,11 @@
         color: $grey;
         width: 20px;
         height: 20px;
+        span {
+          padding: 0;
+          margin: 0;
+          font-size: $fa-xs;
+        }
       }
     }
     .nav-link {
@@ -117,7 +125,7 @@
   border-radius: 5px;
   color: $light;
   &:focus {
-    border: 1px solid blue;
+    border: 1px solid $blue;
     outline: none;
   }
   &::placeholder {
