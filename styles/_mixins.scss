@@ -5,3 +5,25 @@
     @content;
   }
 }
+
+@mixin flex($flow, $content, $items) {
+  display: flex;
+  flex-flow: $flow;
+  justify-content: $content;
+  align-items: $items;
+}
+
+@mixin border($radius, $width, $height) {
+  border: 1px solid $light-tert;
+  border-radius: $radius;
+  width: $width;
+  height: $height;
+}
+
+@mixin borderbottom() {
+  border-bottom: 1px solid $light-tert;
+}
+
+@mixin bordertop() {
+  border-top: 1px solid $light-tert;
+}

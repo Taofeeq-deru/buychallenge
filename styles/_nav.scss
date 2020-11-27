@@ -2,15 +2,15 @@
 @import "./mixins";
 
 .nav {
-  background-color: #24292e;
+  background-color: $dark-sec;
   padding: 15px;
   a {
-    color: #ffffff;
+    color: $white;
     margin: auto 0;
     text-decoration: none;
     &:hover {
       text-decoration: none;
-      color: hsla(0, 0%, 100%, 0.7);
+      color: $hover;
     }
   }
   //mobile nav view
@@ -18,12 +18,11 @@
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
-    color: #ffffff;
+    color: $white;
     @include responsive($md) {
       display: none;
     }
-    .fas,
-    .fab {
+    .big {
       font-size: 200%;
     }
   }
@@ -31,8 +30,7 @@
   .pc-view {
     display: none;
     @include responsive($md) {
-      display: flex;
-      flex-flow: row nowrap;
+      @include flex(row nowrap, inherit, inherit);
     }
     .fab {
       font-size: 200%;
@@ -61,16 +59,16 @@
         align-items: center;
         top: 4px;
         right: 8px;
-        border: 1px solid #9b9b9b;
+        border: 1px solid $grey;
         border-radius: 5px;
-        color: #9b9b9b;
+        color: $grey;
         width: 20px;
         height: 20px;
       }
     }
     .nav-link {
       margin: auto 5px;
-      font-size: 14px;
+      font-size: $fa-sm;
       font-weight: 500;
       @include responsive($lg) {
         margin: auto 10px;
@@ -84,22 +82,20 @@
     }
     .end {
       margin-left: auto;
-      display: flex;
-      flex-flow: row nowrap;
+      @include flex(row nowrap, inherit, inherit);
       .nav-link-end {
         margin: auto 5px;
-        font-size: 14px;
-        color: #ffffff;
+        font-size: $fa-sm;
+        color: $white;
         display: flex;
         @include responsive($lg) {
           margin: auto 10px;
         }
         &:hover {
           cursor: pointer;
-          color: hsla(0, 0%, 100%, 0.7);
+          color: $hover;
         }
         .avi {
-          border-radius: 100%;
           width: 25px;
           height: 25px;
           margin: auto 0;
@@ -117,15 +113,15 @@
 //nav search input
 .nav-search {
   background: transparent;
-  border: 1px solid #9b9b9b;
+  border: 1px solid $grey;
   border-radius: 5px;
-  color: #f6f8fa;
+  color: $light;
   &:focus {
     border: 1px solid blue;
     outline: none;
   }
   &::placeholder {
-    color: #cfcece;
+    color: $lightgrey;
   }
 }
 
@@ -133,7 +129,7 @@
 .mob-nav {
   display: none;
   padding: 1px 15px;
-  background-color: #24292e;
+  background-color: $dark-sec;
   #mob-search {
     width: 100%;
     height: 30px;
@@ -143,13 +139,12 @@
     list-style-type: none;
     padding: 0;
     li {
-      border-top: 1px solid #9b9b9b;
-      color: #ffffff;
+      border-top: 1px solid $grey;
+      color: $white;
       padding: 10px 0;
       font-weight: 500;
       display: flex;
       .avi {
-        border-radius: 100%;
         width: 20px;
         height: 20px;
         margin: auto 0;

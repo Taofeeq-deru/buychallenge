@@ -1,0 +1,29 @@
+@import "./variables";
+@import "./mixins";
+
+footer {
+  margin: 70px 15px 0 15px;
+  padding: 40px 20px;
+  @include bordertop();
+  @include responsive($lg) {
+    padding: 40px 0;
+  }
+  .footer-links {
+    color: $dark-sec;
+    @include flex(row wrap, center, inherit);
+    p {
+      font-size: $fa-xs;
+      margin: 3px 5px;
+    }
+    a {
+      font-size: $fa-xs;
+      color: $blue;
+      margin: 3px 5px;
+      text-decoration: none;
+      &:hover {
+        color: $blue;
+        text-decoration: underline;
+      }
+    }
+  }
+}

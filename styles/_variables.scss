@@ -6,3 +6,35 @@ $md: 40em; //hi-res tablets and low-res laptops
 $sm: 26em; //mobile and low-res tablets
 $xs: 22em; //mobile (medium screen size) only
 $xxs: 20em; //mobile (small screen size) only
+//font family
+$font: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif,
+  Apple Color Emoji, Segoe UI Emoji;
+//font size
+$fa-xs: 12px;
+$fa-sm: 14px;
+$fa-md: 16px;
+$fa-lg: 18px;
+$fa-xl: 24px;
+$fa-xxl: 36px;
+//colors
+$white: #ffffff;
+$light: #f6f8fa;
+$light-sec: #ebecee;
+$light-tert: #e1e4e8;
+$hover: hsla(0, 0%, 100%, 0.7);
+$lightgrey: #cfcece;
+$grey: #9b9b9b;
+$grey-sec: #7c7c7c;
+$dark-sec: #24292e;
+$dark-pry: #586069;
+$orangish: rgb(249, 130, 108);
+$green: #2ea44f;
+$blue: #0366d6;
+$disabledblue: rgba(3, 101, 214, 0.6);
+$js: #f1e05a;
+$scss: #c6538c;
+$html: #e34c26;
+$php: #4f5d95;
+$python: #3572a5;
+$ts: #2b7489;
+$css: #563d7c;
