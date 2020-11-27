@@ -1,13 +1,19 @@
 @import "./variables";
 @import "./mixins";
 @import "./nav";
+@import "./content";
+@import "./footer";
 
 body {
   padding: 0;
   margin: 0;
-  font-family: "Roboto", sans-serif;
+  font-family: $font;
 }
 
 input {
-  padding-left: 8px;
+  padding: 0 9px;
+}
+
+img {
+  border-radius: 100%;
 }

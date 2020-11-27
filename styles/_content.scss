@@ -1,0 +1,347 @@
+@import "./variables";
+@import "./mixins";
+
+#content {
+  padding: 7px 0;
+  .bio {
+    padding: 0 15px;
+    .avi-names {
+      @include flex(row nowrap, inherit, inherit);
+      .avi {
+        margin-right: 20px;
+        img.avatar {
+          width: 55px;
+          height: 55px;
+        }
+      }
+      .names {
+        h1 {
+          font-weight: 700;
+          font-size: $fa-xl;
+          margin: 0;
+          padding-bottom: 0;
+          color: $dark-sec;
+        }
+        h2 {
+          font-size: $fa-lg;
+          font-weight: 400;
+          margin-top: 2px;
+          color: $dark-pry;
+        }
+      }
+    }
+    .set-status {
+      @include border(5px, 100%, 28px);
+      @include flex(row nowrap, inherit, center);
+      color: $dark-pry;
+      @include responsive($md) {
+        @include border(5px, 100%, 30px);
+      }
+      .far {
+        font-size: $fa-sm;
+        margin: 0 8px;
+      }
+      p {
+        font-size: $fa-xs;
+      }
+    }
+    .desc {
+      color: $dark-sec;
+      font-size: $fa-md;
+    }
+  }
+  .mobile-tabs {
+    margin-top: 20px;
+    padding: 0 15px;
+    @include borderbottom();
+    @include flex(row nowrap, flex-start, inherit);
+    overflow-x: scroll;
+    color: $dark-sec;
+    p {
+      font-size: $fa-md;
+      padding: 15px 13px;
+      margin-bottom: 0;
+      flex-shrink: 0;
+    }
+    p.active {
+      font-weight: 600;
+      border-bottom: 2px solid $orangish;
+      .amount {
+        font-size: $fa-sm;
+        font-weight: 400;
+        border-radius: 10px;
+        background-color: rgba(209, 213, 218, 0.5);
+        border: 0;
+        padding: 2px 6px;
+      }
+    }
+  }
+  .tab-content {
+    padding: 15px;
+    .search-repo {
+      @include flex(row wrap, space-between, inherit);
+      @include borderbottom();
+      @include responsive($md) {
+        padding-bottom: 15px;
+      }
+      .find-repo {
+        @include border(5px, 100%, 30px);
+        &:focus {
+          border: 1px solid blue;
+          outline: none;
+          box-shadow: 0 0 0 2pt rgb(178, 178, 250);
+        }
+        &::placeholder {
+          color: $grey-sec;
+        }
+        @include responsive($md) {
+          flex: 1;
+          margin-right: 15px;
+          @include border(5px, 100%, 35px);
+        }
+      }
+      .details {
+        margin: 15px 0;
+        width: 100%;
+        @include flex(row nowrap, inherit, inherit);
+        @include responsive($md) {
+          margin: 0;
+          width: unset;
+        }
+      }
+      details {
+        position: relative;
+        summary {
+          background-color: $light;
+          @include border(5px, 50px, 28px);
+          @include flex(row nowrap, center, center);
+          margin: 0 5px 0 0;
+          padding: 0 20px;
+          font-size: $fa-sm;
+          font-weight: 500;
+          color: $dark-sec;
+          @include responsive($md) {
+            @include border(5px, 50px, 33px);
+          }
+          &::-webkit-details-marker {
+            display: none;
+          }
+          &:hover {
+            cursor: pointer;
+            background-color: $light-sec;
+          }
+          &:focus {
+            outline: none;
+          }
+          span {
+            color: $dark-pry;
+          }
+          .fas {
+            margin-left: 5px;
+          }
+        }
+        .details-menu {
+          @include border(10px, 280px, max-content);
+          padding: 0 0;
+          position: absolute;
+          top: 40px;
+          left: 0;
+          z-index: 50;
+          background-color: $white;
+          box-shadow: 0px 4px 10px 2px rgba(229, 229, 229, 0.5);
+          @include responsive($md) {
+            left: -180px;
+          }
+          p {
+            border-bottom: 1px solid $grey;
+            padding: 10px 15px;
+            margin: 0;
+            font-size: $fa-sm;
+            color: $dark-sec;
+            .inactive {
+              visibility: hidden;
+            }
+          }
+          p.title {
+            font-weight: 500;
+          }
+        }
+      }
+      details.lang {
+        summary {
+          @include border(5px, 80px, 28px);
+          @include responsive($md) {
+            @include border(5px, 80px, 33px);
+          }
+        }
+        .details-menu {
+          left: -100px;
+          @include responsive($md) {
+            left: -150px;
+          }
+        }
+      }
+      .btn-new {
+        @include flex(row nowrap, center, center);
+        border: 0;
+        border-radius: 5px;
+        background-color: $green;
+        color: $white;
+        height: 28px;
+        padding: 0 20px;
+        font-size: $fa-sm;
+        font-weight: 500;
+        margin-left: auto;
+        @include responsive($md) {
+          margin-left: 15px;
+          height: 35px;
+        }
+        svg {
+          margin-right: 3px;
+          path {
+            fill: $white;
+          }
+        }
+      }
+    }
+    .repo-list {
+      padding: 0;
+      @include flex(column nowrap, inherit, inherit);
+      .repo {
+        padding: 20px 0;
+        width: 100%;
+        @include flex(row nowrap, space-between, center);
+        @include borderbottom();
+        .name-lang {
+          max-width: 60%;
+          .name-type {
+            @include flex(row nowrap, inherit, flex-end);
+            a {
+              color: $blue;
+              font-weight: 600;
+              font-size: $fa-xl;
+              margin: 0 15px 0 0;
+              text-decoration: none;
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+            .type {
+              @include border(10px, inherit, inherit);
+              padding: 1px 6px;
+              margin-bottom: 3px;
+              color: $dark-pry;
+              font-weight: 500;
+              font-size: $fa-xs;
+            }
+          }
+          .forked {
+            color: $dark-pry;
+            font-size: $fa-xs;
+            margin: 5px 0;
+            .link {
+              text-decoration: none;
+              color: $dark-pry;
+              &:hover {
+                color: $blue;
+                text-decoration: none;
+              }
+            }
+          }
+          .detail {
+            color: $dark-pry;
+            font-size: $fa-sm;
+            margin: 5px 0;
+          }
+          .lang-updated {
+            @include flex(row wrap, inherit, inherit);
+            margin-top: 15px;
+            p {
+              color: $dark-pry;
+              font-size: $fa-xs;
+              margin: 0 20px 3px 0;
+              .fa-circle {
+                margin-right: 2px;
+              }
+              .js {
+                color: $js;
+              }
+              .css {
+                color: $css;
+              }
+              .scss {
+                color: $scss;
+              }
+              .ts {
+                color: $ts;
+              }
+              .php {
+                color: $php;
+              }
+              .python {
+                color: $python;
+              }
+              .html {
+                color: $html;
+              }
+            }
+            a {
+              text-decoration: none;
+              color: $dark-pry;
+              font-size: $fa-xs;
+              margin: 0 20px 3px 0;
+              &:hover {
+                text-decoration: none;
+                color: $blue;
+              }
+            }
+          }
+        }
+        .star {
+          .btn-star {
+            background-color: $white;
+            padding: 0 20px;
+            font-size: $fa-sm;
+            font-weight: 500;
+            color: $dark-sec;
+            @include flex(row nowrap, center, center);
+            @include border(6px, inherit, 28px);
+            @include responsive($md) {
+              @include border(6px, inherit, 33px);
+            }
+            &:hover {
+              cursor: pointer;
+              background-color: $light-sec;
+            }
+            &:focus {
+              outline: none;
+            }
+            .far {
+              margin-right: 3px;
+              color: $dark-pry;
+            }
+          }
+        }
+      }
+    }
+  }
+  .buttons {
+    @include flex(row nowrap, center, inherit);
+    button {
+      color: $disabledblue;
+      padding: 0 20px;
+      background-color: $white;
+      font-weight: 700;
+      &:focus {
+        outline: none;
+      }
+    }
+    .btn-prev {
+      @include border(5px 0 0 5px, inherit, 33px);
+    }
+    .btn-next {
+      @include border(0 5px 5px 0, inherit, 33px);
+      border-left: 0;
+    }
+  }
+}

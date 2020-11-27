@@ -3,11 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
@@ -21,8 +16,8 @@
     <!--nav-->
     <nav class="nav">
       <div class="mob-view">
-        <i class="fas fa-bars" id="nav-toggler"></i>
-        <a href=""><i class="fab fa-github"></i></a>
+        <i class="fas fa-bars big" id="nav-toggler"></i>
+        <a href=""><i class="fab fa-github big"></i></a>
         <a href=""><i class="far fa-bell"></i></a>
       </div>
       <div class="pc-view">
@@ -77,7 +72,218 @@
       </ul>
     </div>
     <!--content-->
-    <div id="content"></div>
+    <div id="content">
+      <div class="bio">
+        <div class="avi-names">
+          <div class="avi">
+            <img src="./avi.jpg" alt="Taofeeq-deru" class="avatar" />
+          </div>
+          <div class="names">
+            <h1>Taofeeq Oluderu</h1>
+            <h2>Taofeeq-deru</h2>
+          </div>
+        </div>
+        <div class="set-status">
+          <i class="far fa-smile"></i>
+          <p>Set status</p>
+        </div>
+        <div class="desc">
+          <p>Frontend developer with a little backend knowledge</p>
+        </div>
+      </div>
+      <div class="mobile-tabs" role="navigation">
+        <p>Overview</p>
+        <p class="active">Repositores <span class="amount">40</span></p>
+        <p>Projects</p>
+        <p>Packages</p>
+      </div>
+      <div class="tab-content">
+        <div class="search-repo">
+          <input
+            type="search"
+            name="find-repo"
+            id="find-repo"
+            class="find-repo"
+            placeholder="Find a repository..."
+          />
+          <div class="details">
+            <details>
+              <summary>
+                <span>Type:</span>&nbsp;All <i class="fas fa-caret-down"></i>
+              </summary>
+              <div class="details-menu">
+                <p class="title">Select type</p>
+                <p><i class="fas fa-check"></i> All</p>
+                <p><i class="fas fa-check inactive"></i> Public</p>
+                <p><i class="fas fa-check inactive"></i> Private</p>
+                <p><i class="fas fa-check inactive"></i> Sources</p>
+                <p><i class="fas fa-check inactive"></i> Forks</p>
+                <p><i class="fas fa-check inactive"></i> Archived</p>
+              </div>
+            </details>
+            <details class="lang">
+              <summary>
+                <span>Language:</span>&nbsp;All
+                <i class="fas fa-caret-down"></i>
+              </summary>
+              <div class="details-menu">
+                <p class="title">Select language</p>
+                <p><i class="fas fa-check"></i> All</p>
+                <p><i class="fas fa-check inactive"></i> JavaScript</p>
+                <p><i class="fas fa-check inactive"></i> SCSS</p>
+                <p><i class="fas fa-check inactive"></i> HTML</p>
+                <p><i class="fas fa-check inactive"></i> PHP</p>
+                <p><i class="fas fa-check inactive"></i> Python</p>
+                <p><i class="fas fa-check inactive"></i> TypeScript</p>
+                <p><i class="fas fa-check inactive"></i> CSS</p>
+              </div>
+            </details>
+            <button class="btn-new">
+              <svg height="16px" width="16px" viewBox="0 0 16 16">
+                <path
+                  fill-rule="evenodd"
+                  d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25 0 00.4.2l1.45-1.087a.25.25 0 01.3 0L8.6 15.7a.25.25 0 00.4-.2v-3.25a.25.25 0 00-.25-.25h-3.5a.25.25 0 00-.25.25z"
+                />
+              </svg>
+              New
+            </button>
+          </div>
+        </div>
+        <div class="repo-list">
+          <div class="repo">
+            <div class="name-lang">
+              <div class="name-type">
+                <a href="">washryte</a>
+                <span class="type">Private</span>
+              </div>
+              <p class="detail">A laundromat</p>
+              <div class="lang-updated">
+                <p class="lang"><i class="fas fa-circle js"></i>JavaDcript</p>
+                <a href=""><i class="far fa-star"></i> 5</a>
+                <a href=""><i class="fas fa-code-branch"></i> 55</a>
+                <a href=""><i class="fas fa-balance-scale"></i> MIT License</a>
+                <p class="updated">Updated yesterday</p>
+              </div>
+            </div>
+            <div class="star">
+              <button class="btn-star"><i class="far fa-star"></i> Star</button>
+            </div>
+          </div>
+          <div class="repo">
+            <div class="name-lang">
+              <div class="name-type">
+                <a href="">detty-dec</a>
+              </div>
+              <p class="forked">
+                Forked from <a href="#" class="link">bla bla </a>
+              </p>
+              <p class="detail">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Pariatur atque, modi illo consequuntur eos alias debitis quasi
+              </p>
+              <div class="lang-updated">
+                <p class="lang"><i class="fas fa-circle php"></i>PHP</p>
+                <a href=""><i class="far fa-star"></i> 5</a>
+                <a href=""><i class="fas fa-code-branch"></i> 3</a>
+                <p class="updated">Updated on 6 Jun</p>
+              </div>
+            </div>
+            <div class="star">
+              <button class="btn-star"><i class="far fa-star"></i> Star</button>
+            </div>
+          </div>
+          <div class="repo">
+            <div class="name-lang">
+              <div class="name-type">
+                <a href="">weaterApp</a>
+              </div>
+              <p class="detail">Simple weather map</p>
+              <div class="lang-updated">
+                <p class="lang"><i class="fas fa-circle html"></i>HTML</p>
+                <p class="updated">Updated on 16 Feb</p>
+              </div>
+            </div>
+            <div class="star">
+              <button class="btn-star"><i class="far fa-star"></i> Star</button>
+            </div>
+          </div>
+          <div class="repo">
+            <div class="name-lang">
+              <div class="name-type">
+                <a href="">django</a>
+              </div>
+              <div class="lang-updated">
+                <p class="lang"><i class="fas fa-circle python"></i>Python</p>
+                <p class="updated">Updated on 5 Jan</p>
+              </div>
+            </div>
+            <div class="star">
+              <button class="btn-star"><i class="far fa-star"></i> Star</button>
+            </div>
+          </div>
+          <div class="repo">
+            <div class="name-lang">
+              <div class="name-type">
+                <a href="">ant-design</a>
+              </div>
+              <p class="forked">
+                Forked from <a href="#" class="link">bla bla </a>
+              </p>
+              <p class="detail">A UI Design Language and React UI Library</p>
+              <div class="lang-updated">
+                <p class="lang"><i class="fas fa-circle ts"></i>TypeScript</p>
+                <a href=""><i class="fas fa-code-branch"></i> 5000</a>
+                <a href=""><i class="fas fa-balance-scale"></i> MIT License</a>
+                <p class="updated">Updated on 5 Mar</p>
+              </div>
+            </div>
+            <div class="star">
+              <button class="btn-star"><i class="far fa-star"></i> Star</button>
+            </div>
+          </div>
+          <div class="repo">
+            <div class="name-lang">
+              <div class="name-type">
+                <a href="">team-4</a>
+                <span class="type">Private</span>
+              </div>
+              <p class="forked">
+                Forked from <a href="#" class="link">bla bla </a>
+              </p>
+              <div class="lang-updated">
+                <p class="lang"><i class="fas fa-circle css"></i>CSS</p>
+                <a href=""><i class="fas fa-code-branch"></i> 5</a>
+                <p class="updated">Updated on 13 October 2019</p>
+              </div>
+            </div>
+            <div class="star">
+              <button class="btn-star"><i class="far fa-star"></i> Star</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="buttons">
+        <button class="btn-prev">Previous</button>
+        <button class="btn-next">Next</button>
+      </div>
+    </div>
+    <!--footer-->
+    <footer>
+      <div class="footer-links">
+        <p>&copy; 2020 GitHub, Inc.</p>
+        <a href="">Terms</a>
+        <a href="">Privacy</a>
+        <a href="">Security</a>
+        <a href="">Status</a>
+        <a href="">Help</a>
+        <a href="">Contact GitHub</a>
+        <a href="">Pricing</a>
+        <a href="">API</a>
+        <a href="">Training</a>
+        <a href="">Blog</a>
+        <a href="">About</a>
+      </div>
+    </footer>
 
     <script src="scripts/script.js"></script>
   </body>
