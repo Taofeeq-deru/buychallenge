@@ -21,6 +21,15 @@
         font-weight: 600;
         @include flex(row nowrap, flex-start, inherit);
         visibility: hidden;
+        @include responsive($lg) {
+          margin-right: 30px;
+        }
+        @include responsive($mxl) {
+          width: 260px;
+        }
+        @include responsive($xl) {
+          width: 280px;
+        }
         p {
           padding-left: 5px;
         }
@@ -35,7 +44,7 @@
       padding: 0 60px;
     }
     @include responsive($xl) {
-      padding: 0 100px;
+      padding: 0 var(--screen-x);
     }
     a {
       font-size: $fa-sm;
@@ -70,21 +79,20 @@
         background-color: rgba(209, 213, 218, 0.5);
         border: 0;
         padding: 2px 6px;
+        margin-left: 5px;
       }
     }
   }
   .flex-pc {
     @include responsive($md) {
-      //width: 100%;
       padding: 0 25px;
       @include flex(row nowrap, inherit, inherit);
-      //position: relative;
     }
     @include responsive($mxl) {
       padding: 0 60px;
     }
     @include responsive($xl) {
-      padding: 0 100px;
+      padding: 0 var(--screen-x);
     }
   }
 
@@ -95,6 +103,12 @@
     }
     @include responsive($lg) {
       width: 222px;
+    }
+    @include responsive($mxl) {
+      width: 272px;
+    }
+    @include responsive($mxl) {
+      width: 292px;
     }
   }
   .bio {
@@ -116,6 +130,9 @@
           width: 55px;
           height: 55px;
         }
+        .set-status-pc {
+          display: none;
+        }
         @include responsive($md) {
           margin: 0 0 20px 0;
           position: relative;
@@ -124,6 +141,35 @@
             width: 168px;
             height: 168px;
           }
+          .set-status-pc {
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            @include flex(row nowrap, center, center);
+            background-color: $white;
+            color: $dark-pry;
+            @include border(100%, 35px, 35px);
+            @include responsive($mxl) {
+              bottom: 25px;
+              right: 25px;
+            }
+            p {
+              display: none;
+            }
+            &:hover {
+              cursor: pointer;
+              color: $blue;
+              @include flex(row nowrap, unset, center);
+              @include border(20px, max-content, 35px);
+              padding: 0 10px;
+              p {
+                display: flex;
+                font-size: $fa-xs;
+                margin: 0 0 0 5px;
+                padding: 0;
+              }
+            }
+          }
         }
         @include responsive($lg) {
           img.avatar {
@@ -131,10 +177,22 @@
             height: 210px;
           }
         }
+        @include responsive($mxl) {
+          img.avatar {
+            width: 260px;
+            height: 260px;
+          }
+        }
+        @include responsive($mxl) {
+          img.avatar {
+            width: 280px;
+            height: 280px;
+          }
+        }
       }
       .names {
         h1 {
-          font-weight: 700;
+          font-weight: 600;
           font-size: $fa-xl;
           margin: 0;
           padding-bottom: 0;
@@ -166,6 +224,12 @@
     .desc {
       color: $dark-sec;
       font-size: $fa-md;
+      width: 80%;
+      margin-top: 0;
+      p {
+        margin-top: 0;
+        padding-top: 0;
+      }
     }
   }
   .mobile-tabs {
@@ -241,18 +305,20 @@
         }
       }
       details {
-        position: relative;
+        @include responsive($smd) {
+          position: relative;
+        }
         summary {
           background-color: $light-pry;
-          @include border(5px, 50px, 28px);
+          @include border(5px, inherit, 28px);
           @include flex(row nowrap, center, center);
           margin: 0 5px 0 0;
-          padding: 0 20px;
+          padding: 0 10px;
           font-size: $fa-sm;
           font-weight: 500;
           color: $dark-sec;
           @include responsive($md) {
-            @include border(5px, 50px, 31px);
+            @include border(5px, inherit, 31px);
           }
           &::-webkit-details-marker {
             display: none;
@@ -271,44 +337,88 @@
             margin-left: 5px;
           }
         }
+        .menu {
+          position: fixed;
+          background-color: rgba(27, 31, 35, 0.5);
+          top: 0;
+          left: 0;
+          width: 100vw;
+          height: 100vh;
+          z-index: 69;
+          @include responsive($smd) {
+            position: relative;
+            background-color: transparent;
+            width: unset;
+            height: unset;
+            z-index: 49;
+          }
+        }
         .details-menu {
-          @include border(10px, 280px, max-content);
+          @include border(10px, 92%, min-content);
           padding: 0 0 1px 0;
           position: absolute;
-          top: 40px;
-          left: 0;
-          z-index: 50;
+          top: 20vh;
+          left: 4%;
+          z-index: 70;
           background-color: $white;
-          box-shadow: 0px 4px 10px 2px rgba(229, 229, 229, 0.5);
+          box-shadow: 0px 4px 10px 5px rgba(229, 229, 229, 0.5);
+          @include responsive($smd) {
+            @include border(10px, 280px, max-content);
+            top: 10px;
+            left: 0;
+          }
           @include responsive($md) {
-            left: -180px;
+            left: -170px;
+            z-index: 50;
+          }
+          .menu-list {
+            height: 350px;
+            overflow-y: scroll;
+            @include responsive($smd) {
+              height: max-content;
+              &::-webkit-scrollbar {
+                display: none;
+                width: 0;
+              }
+            }
           }
           p {
             @include borderbottom();
-            padding: 6px 15px;
+            padding: 20px 15px;
             margin: 0;
             font-size: $fa-sm;
             color: $dark-sec;
+            @include responsive($smd) {
+              padding: 6px 15px;
+            }
             .inactive {
               visibility: hidden;
             }
           }
           p.title {
             font-weight: 500;
+            display: flex;
+            span {
+              margin-left: auto;
+              color: $dark-pry;
+              font-size: $fa-lg;
+              font-weight: 700;
+              &:hover {
+                cursor: pointer;
+              }
+            }
           }
         }
       }
       details.lang {
-        summary {
-          @include border(5px, 80px, 28px);
-          @include responsive($md) {
-            @include border(5px, 80px, 31px);
-          }
-        }
         .details-menu {
-          left: -100px;
+          @include responsive($smd) {
+            @include border(10px, 280px, max-content);
+            top: 10px;
+            left: -100px;
+          }
           @include responsive($md) {
-            left: -150px;
+            left: -160px;
           }
         }
       }
@@ -345,7 +455,7 @@
         @include borderbottom();
         .name-lang {
           max-width: 60%;
-          .name-type {
+          .name {
             @include flex(row nowrap, inherit, flex-end);
             a {
               color: $blue;
@@ -356,14 +466,6 @@
               &:hover {
                 text-decoration: underline;
               }
-            }
-            .type {
-              @include border(10px, inherit, inherit);
-              padding: 1px 6px;
-              margin-bottom: 3px;
-              color: $dark-pry;
-              font-weight: 500;
-              font-size: $fa-xs;
             }
           }
           .forked {
@@ -462,7 +564,7 @@
     button {
       color: $disabledblue;
       padding: 0 20px;
-      background-color: $white;
+      background-color: $disabledwhite;
       font-weight: 700;
       &:focus {
         outline: none;

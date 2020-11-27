@@ -3,7 +3,8 @@ $xl: 87.5em; //4k and hi-res desktop - >1440
 $mxl: 70.5em; //4k and hi-res desktop - 1024<x<1440
 $lg: 60em; //1080 and hi-res laptops
 $md: 40em; //hi-res tablets and low-res laptops
-$sm: 26em; //mobile and low-res tablets
+$smd: 34em; //low-res tablets
+$sm: 26em; //mobile
 $xs: 22em; //mobile (medium screen size) only
 $xxs: 20em; //mobile (small screen size) only
 //font family
@@ -18,6 +19,7 @@ $fa-xl: 24px;
 $fa-xxl: 36px;
 //colors
 $white: #ffffff;
+$disabledwhite: rgba(255, 255, 255, 0.4);
 $light: #f6f8fa;
 $light-pry: #fafbfc;
 $light-sec: #ebecee;
