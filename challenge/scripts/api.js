@@ -128,18 +128,30 @@ async function fetchAPI() {
                     updatedDate = `less than a minute ago`;
                   } else {
                     const diff = today.mins - mins;
-                    updatedDate = `${diff} minutes ago`;
+                    if (diff == 1) {
+                      updatedDate = `a minute ago`;
+                    } else {
+                      updatedDate = `${diff} minutes ago`;
+                    }
                   }
                 } else {
                   const diff = today.hour - hour;
-                  updatedDate = `${diff} hours ago`;
+                  if (diff == 1) {
+                    updatedDate = `${diff} hour ago`;
+                  } else {
+                    updatedDate = `${diff} hours ago`;
+                  }
                 }
               } else {
                 const diff = today.date - date;
                 if (diff == 1) {
                   const hourDiff = today.hour + 24 - hour;
                   if (hourDiff < 24) {
-                    updatedDate = `${hourDiff} hours ago`;
+                    if (hourDiff == 1) {
+                      updatedDate = `${hourDiff} hour ago`;
+                    } else {
+                      updatedDate = `${hourDiff} hours ago`;
+                    }
                   } else {
                     updatedDate = `yesterday`;
                   }
