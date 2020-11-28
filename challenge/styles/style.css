@@ -1316,7 +1316,7 @@
 }
 
 #content .tab-content .repo-list .repo .name-lang {
-  max-width: 60%;
+  max-width: 70%;
 }
 
 #content .tab-content .repo-list .repo .name-lang .name {
@@ -1338,15 +1338,9 @@
 #content .tab-content .repo-list .repo .name-lang .name a {
   color: #0366d6;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 20px;
   margin: 0 15px 0 0;
   text-decoration: none;
-}
-
-@media screen and (min-width: 34em) {
-  #content .tab-content .repo-list .repo .name-lang .name a {
-    font-size: 24px;
-  }
 }
 
 #content .tab-content .repo-list .repo .name-lang .name a:hover {
