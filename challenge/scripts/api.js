@@ -110,6 +110,8 @@ async function fetchAPI() {
         year: thisYear,
       };
 
+      repositories.nodes.reverse();
+
       repoList.innerHTML = repositories.nodes
         .map((repo) => {
           const mins = new Date(repo.updatedAt).getMinutes();
@@ -123,7 +125,7 @@ async function fetchAPI() {
               if (date == today.date) {
                 if (hour == today.hour) {
                   if (mins == today.mins) {
-                    updatedDate = `a few seconds ago`;
+                    updatedDate = `less than a minute ago`;
                   } else {
                     const diff = today.mins - mins;
                     updatedDate = `${diff} minutes ago`;

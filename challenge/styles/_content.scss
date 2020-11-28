@@ -144,15 +144,15 @@
           }
           .set-status-pc {
             position: absolute;
-            bottom: 15px;
-            right: 15px;
+            bottom: 30px;
+            left: 135px;
             @include flex(row nowrap, center, center);
             background-color: $white;
             color: $dark-pry;
             @include border(100%, 35px, 35px);
-            @include responsive($mxl) {
-              bottom: 25px;
-              right: 25px;
+            @include responsive($lg) {
+              bottom: 35px;
+              left: 80%;
             }
             p {
               display: none;
@@ -452,7 +452,7 @@
       padding: 0;
       @include flex(column nowrap, inherit, inherit);
       .repo {
-        padding: 20px 0;
+        padding: 25px 0;
         width: 100%;
         @include flex(row nowrap, space-between, center);
         @include borderbottom();
