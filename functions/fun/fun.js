@@ -1,50 +1,10 @@
 const fetch = require("node-fetch");
 
 const handler = async function (event) {
-  // const content = {
-  //   query: `{
-  //     viewer {
-  //       login
-  //       bio
-  //       avatarUrl
-  //       name
-  //       repositories(last: 20, orderBy: {field: UPDATED_AT, direction: ASC}, privacy: PUBLIC) {
-  //         totalCount
-  //         nodes {
-  //           forkCount
-  //           isFork
-  //           url
-  //           stargazerCount
-  //           name
-  //           description
-  //           updatedAt
-  //           primaryLanguage {
-  //             color
-  //             name
-  //           }
-  //           parent {
-  //             forkCount
-  //             name
-  //             nameWithOwner
-  //             stargazerCount
-  //             updatedAt
-  //             url
-  //             licenseInfo {
-  //               name
-  //             }
-  //           }
-  //         }
-  //       }
-  //     }
-  //   }`,
-  // };
-
   // Only allow POST
   if (event.httpMethod !== "POST") {
     return { statusCode: 405, body: "Method Not Allowed" };
   }
-
-  //const params = querystring.parse(event.body);
 
   const token = process.env.API_KEY;
   const options = {

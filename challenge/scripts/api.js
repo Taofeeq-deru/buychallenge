@@ -39,11 +39,7 @@ const content = {
 };
 
 const body = JSON.stringify(content);
-//const url = "https://api.github.com/graphql";
-//const url = "http://localhost:8888/api/fun";
 const url = "https://buychallenge.netlify.app/api/fun";
-//const token = process.env.API_KEY || config.API_KEY;
-//const token = config.API_KEY;
 
 const options = {
   method: "post",
@@ -64,7 +60,6 @@ async function fetchAPI() {
   await fetch(url, options)
     .then((resp) => resp.json())
     .then((data) => {
-      console.log(data);
       const {
         avatarUrl,
         login,
