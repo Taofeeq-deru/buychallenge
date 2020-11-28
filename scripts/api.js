@@ -1,3 +1,5 @@
+//require("dotenv").config();
+
 const content = {
   query: `{
     viewer {
@@ -38,7 +40,8 @@ const content = {
 
 const body = JSON.stringify(content);
 const url = "https://api.github.com/graphql";
-const token = ` 34872bf574469d7d865f69d3fb3fd2563915c6fc`;
+const token = process.env.API_KEY || config.API_KEY;
+//const token = config.API_KEY;
 
 const options = {
   method: "post",
@@ -104,7 +107,6 @@ async function fetchAPI() {
         month: thisMonth,
         year: thisYear,
       };
-      console.log(today);
 
       repoList.innerHTML = repositories.nodes
         .map((repo) => {
@@ -118,8 +120,12 @@ async function fetchAPI() {
             if (monthVar == today.month) {
               if (date == today.date) {
                 if (hour == today.hour) {
-                  const diff = today.mins - mins;
-                  updatedDate = `${diff} minutes ago`;
+                  if (mins == today.mins) {
+                    updatedDate = `a few seconds ago`;
+                  } else {
+                    const diff = today.mins - mins;
+                    updatedDate = `${diff} minutes ago`;
+                  }
                 } else {
                   const diff = today.hour - hour;
                   updatedDate = `${diff} hours ago`;
@@ -211,7 +217,9 @@ async function fetchAPI() {
         })
         .join("");
     })
-    .catch((err) => console.log(err));
+    .catch((err) => {
+      console.log(err);
+    });
 }
 
 fetchAPI();
