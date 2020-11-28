@@ -466,9 +466,6 @@
               font-size: $fa-mxl;
               margin: 0 15px 0 0;
               text-decoration: none;
-              @include responsive($smd) {
-                font-size: $fa-xl;
-              }
               &:hover {
                 text-decoration: underline;
               }
