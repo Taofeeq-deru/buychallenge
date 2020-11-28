@@ -1,0 +1,5 @@
+{
+  "scripts": {
+    "prebuild" : "cd functions/fun && npm i"
+  }
+}
