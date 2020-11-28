@@ -40,7 +40,7 @@ const content = {
 
 const body = JSON.stringify(content);
 const url = "https://api.github.com/graphql";
-const token = process.env.API_KEY || config.API_KEY;
+const token = secrets.API_KEY || config.API_KEY;
 //const token = config.API_KEY;
 
 const options = {
