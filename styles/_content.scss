@@ -305,144 +305,144 @@
           margin: 0;
           width: unset;
         }
-      }
-      details {
-        @include responsive($smd) {
-          position: relative;
-        }
-        summary {
-          background-color: $light-pry;
-          @include border(5px, inherit, 28px);
-          @include flex(row nowrap, center, center);
-          margin: 0 5px 0 0;
-          padding: 0 10px;
-          font-size: $fa-sm;
-          font-weight: 500;
-          color: $dark-sec;
-          @include responsive($md) {
-            @include border(5px, inherit, 31px);
-          }
-          &::-webkit-details-marker {
-            display: none;
-          }
-          &:hover {
-            cursor: pointer;
-            background-color: $light;
-          }
-          &:focus {
-            outline: none;
-          }
-          span {
-            color: $dark-pry;
-          }
-          .fas {
-            margin-left: 5px;
-          }
-        }
-        .menu {
-          position: fixed;
-          background-color: rgba(27, 31, 35, 0.5);
-          top: 0;
-          left: 0;
-          width: 100vw;
-          height: 100vh;
-          z-index: 69;
+        details {
           @include responsive($smd) {
             position: relative;
-            background-color: transparent;
-            width: unset;
-            height: unset;
-            z-index: 49;
           }
-        }
-        .details-menu {
-          @include border(10px, 92%, min-content);
-          padding: 0 0 1px 0;
-          position: absolute;
-          top: 20vh;
-          left: 4%;
-          z-index: 70;
-          background-color: $white;
-          box-shadow: 0px 4px 10px 5px rgba(229, 229, 229, 0.5);
-          @include responsive($smd) {
-            @include border(10px, 280px, max-content);
-            top: 10px;
-            left: 0;
-          }
-          @include responsive($md) {
-            left: -170px;
-            z-index: 50;
-          }
-          .menu-list {
-            height: 350px;
-            overflow-y: scroll;
-            @include responsive($smd) {
-              height: max-content;
-              &::-webkit-scrollbar {
-                display: none;
-                width: 0;
-              }
-            }
-          }
-          p {
-            @include borderbottom();
-            padding: 20px 15px;
-            margin: 0;
+          summary {
+            background-color: $light-pry;
+            @include border(5px, inherit, 28px);
+            @include flex(row nowrap, center, center);
+            margin: 0 5px 0 0;
+            padding: 0 10px;
             font-size: $fa-sm;
+            font-weight: 500;
             color: $dark-sec;
-            @include responsive($smd) {
-              padding: 6px 15px;
+            @include responsive($md) {
+              @include border(5px, inherit, 31px);
             }
-            .inactive {
-              visibility: hidden;
+            &::-webkit-details-marker {
+              display: none;
+            }
+            &:hover {
+              cursor: pointer;
+              background-color: $light;
+            }
+            &:focus {
+              outline: none;
+            }
+            span {
+              color: $dark-pry;
+            }
+            .fas {
+              margin-left: 5px;
             }
           }
-          p.title {
-            font-weight: 500;
-            display: flex;
-            span {
-              margin-left: auto;
-              color: $dark-pry;
-              font-size: $fa-lg;
-              font-weight: 700;
-              &:hover {
-                cursor: pointer;
+          .menu {
+            position: fixed;
+            background-color: rgba(27, 31, 35, 0.5);
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 69;
+            @include responsive($smd) {
+              position: relative;
+              background-color: transparent;
+              width: unset;
+              height: unset;
+              z-index: 49;
+            }
+          }
+          .details-menu {
+            @include border(10px, 92%, min-content);
+            padding: 0 0 1px 0;
+            position: absolute;
+            top: 20vh;
+            left: 4%;
+            z-index: 70;
+            background-color: $white;
+            box-shadow: 0px 4px 10px 5px rgba(229, 229, 229, 0.5);
+            @include responsive($smd) {
+              @include border(10px, 280px, max-content);
+              top: 10px;
+              left: 0;
+            }
+            @include responsive($md) {
+              left: -170px;
+              z-index: 50;
+            }
+            .menu-list {
+              height: 350px;
+              overflow-y: scroll;
+              @include responsive($smd) {
+                height: max-content;
+                &::-webkit-scrollbar {
+                  display: none;
+                  width: 0;
+                }
+              }
+            }
+            p {
+              @include borderbottom();
+              padding: 20px 15px;
+              margin: 0;
+              font-size: $fa-sm;
+              color: $dark-sec;
+              @include responsive($smd) {
+                padding: 6px 15px;
+              }
+              .inactive {
+                visibility: hidden;
+              }
+            }
+            p.title {
+              font-weight: 500;
+              display: flex;
+              span {
+                margin-left: auto;
+                color: $dark-pry;
+                font-size: $fa-lg;
+                font-weight: 700;
+                &:hover {
+                  cursor: pointer;
+                }
               }
             }
           }
         }
-      }
-      details.lang {
-        .details-menu {
-          @include responsive($smd) {
-            @include border(10px, 280px, max-content);
-            top: 10px;
-            left: -100px;
+        details.lang {
+          .details-menu {
+            @include responsive($smd) {
+              @include border(10px, 280px, max-content);
+              top: 10px;
+              left: -100px;
+            }
+            @include responsive($md) {
+              left: -160px;
+            }
           }
+        }
+        .btn-new {
+          @include flex(row nowrap, center, center);
+          border: 0;
+          border-radius: 5px;
+          background-color: $green;
+          color: $white;
+          height: 30px;
+          padding: 0 20px;
+          font-size: $fa-sm;
+          font-weight: 500;
+          margin-left: auto;
           @include responsive($md) {
-            left: -160px;
+            margin-left: 15px;
+            height: 33px;
           }
-        }
-      }
-      .btn-new {
-        @include flex(row nowrap, center, center);
-        border: 0;
-        border-radius: 5px;
-        background-color: $green;
-        color: $white;
-        height: 30px;
-        padding: 0 20px;
-        font-size: $fa-sm;
-        font-weight: 500;
-        margin-left: auto;
-        @include responsive($md) {
-          margin-left: 15px;
-          height: 33px;
-        }
-        svg {
-          margin-right: 3px;
-          path {
-            fill: $white;
+          svg {
+            margin-right: 3px;
+            path {
+              fill: $white;
+            }
           }
         }
       }
@@ -498,27 +498,6 @@
               .fa-circle {
                 margin-right: 2px;
               }
-              .js {
-                color: $js;
-              }
-              .css {
-                color: $css;
-              }
-              .scss {
-                color: $scss;
-              }
-              .ts {
-                color: $ts;
-              }
-              .php {
-                color: $php;
-              }
-              .python {
-                color: $python;
-              }
-              .html {
-                color: $html;
-              }
             }
             a {
               text-decoration: none;
@@ -535,10 +514,10 @@
         .star {
           .btn-star {
             background-color: $light-pry;
-            padding: 0 20px;
+            padding: 0 10px;
             font-size: $fa-sm;
             font-weight: 500;
-            color: $dark-sec;
+            color: $dark-tert;
             @include flex(row nowrap, center, center);
             @include border(6px, inherit, 28px);
             @include responsive($md) {

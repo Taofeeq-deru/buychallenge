@@ -1048,12 +1048,12 @@
 }
 
 @media screen and (min-width: 34em) {
-  #content .tab-content .search-repo details {
+  #content .tab-content .search-repo .details details {
     position: relative;
   }
 }
 
-#content .tab-content .search-repo details summary {
+#content .tab-content .search-repo .details details summary {
   background-color: #fafbfc;
   border: 1px solid #e1e4e8;
   border-radius: 5px;
@@ -1080,7 +1080,7 @@
 }
 
 @media screen and (min-width: 40em) {
-  #content .tab-content .search-repo details summary {
+  #content .tab-content .search-repo .details details summary {
     border: 1px solid #e1e4e8;
     border-radius: 5px;
     width: inherit;
@@ -1088,28 +1088,28 @@
   }
 }
 
-#content .tab-content .search-repo details summary::-webkit-details-marker {
+#content .tab-content .search-repo .details details summary::-webkit-details-marker {
   display: none;
 }
 
-#content .tab-content .search-repo details summary:hover {
+#content .tab-content .search-repo .details details summary:hover {
   cursor: pointer;
   background-color: #f6f8fa;
 }
 
-#content .tab-content .search-repo details summary:focus {
+#content .tab-content .search-repo .details details summary:focus {
   outline: none;
 }
 
-#content .tab-content .search-repo details summary span {
+#content .tab-content .search-repo .details details summary span {
   color: #586069;
 }
 
-#content .tab-content .search-repo details summary .fas {
+#content .tab-content .search-repo .details details summary .fas {
   margin-left: 5px;
 }
 
-#content .tab-content .search-repo details .menu {
+#content .tab-content .search-repo .details details .menu {
   position: fixed;
   background-color: rgba(27, 31, 35, 0.5);
   top: 0;
@@ -1120,7 +1120,7 @@
 }
 
 @media screen and (min-width: 34em) {
-  #content .tab-content .search-repo details .menu {
+  #content .tab-content .search-repo .details details .menu {
     position: relative;
     background-color: transparent;
     width: unset;
@@ -1129,7 +1129,7 @@
   }
 }
 
-#content .tab-content .search-repo details .details-menu {
+#content .tab-content .search-repo .details details .details-menu {
   border: 1px solid #e1e4e8;
   border-radius: 10px;
   width: 92%;
@@ -1147,7 +1147,7 @@
 }
 
 @media screen and (min-width: 34em) {
-  #content .tab-content .search-repo details .details-menu {
+  #content .tab-content .search-repo .details details .details-menu {
     border: 1px solid #e1e4e8;
     border-radius: 10px;
     width: 280px;
@@ -1160,30 +1160,30 @@
 }
 
 @media screen and (min-width: 40em) {
-  #content .tab-content .search-repo details .details-menu {
+  #content .tab-content .search-repo .details details .details-menu {
     left: -170px;
     z-index: 50;
   }
 }
 
-#content .tab-content .search-repo details .details-menu .menu-list {
+#content .tab-content .search-repo .details details .details-menu .menu-list {
   height: 350px;
   overflow-y: scroll;
 }
 
 @media screen and (min-width: 34em) {
-  #content .tab-content .search-repo details .details-menu .menu-list {
+  #content .tab-content .search-repo .details details .details-menu .menu-list {
     height: -webkit-max-content;
     height: -moz-max-content;
     height: max-content;
   }
-  #content .tab-content .search-repo details .details-menu .menu-list::-webkit-scrollbar {
+  #content .tab-content .search-repo .details details .details-menu .menu-list::-webkit-scrollbar {
     display: none;
     width: 0;
   }
 }
 
-#content .tab-content .search-repo details .details-menu p {
+#content .tab-content .search-repo .details details .details-menu p {
   border-bottom: 1px solid #e1e4e8;
   padding: 20px 15px;
   margin: 0;
@@ -1192,35 +1192,35 @@
 }
 
 @media screen and (min-width: 34em) {
-  #content .tab-content .search-repo details .details-menu p {
+  #content .tab-content .search-repo .details details .details-menu p {
     padding: 6px 15px;
   }
 }
 
-#content .tab-content .search-repo details .details-menu p .inactive {
+#content .tab-content .search-repo .details details .details-menu p .inactive {
   visibility: hidden;
 }
 
-#content .tab-content .search-repo details .details-menu p.title {
+#content .tab-content .search-repo .details details .details-menu p.title {
   font-weight: 500;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-#content .tab-content .search-repo details .details-menu p.title span {
+#content .tab-content .search-repo .details details .details-menu p.title span {
   margin-left: auto;
   color: #586069;
   font-size: 18px;
   font-weight: 700;
 }
 
-#content .tab-content .search-repo details .details-menu p.title span:hover {
+#content .tab-content .search-repo .details details .details-menu p.title span:hover {
   cursor: pointer;
 }
 
 @media screen and (min-width: 34em) {
-  #content .tab-content .search-repo details.lang .details-menu {
+  #content .tab-content .search-repo .details details.lang .details-menu {
     border: 1px solid #e1e4e8;
     border-radius: 10px;
     width: 280px;
@@ -1233,12 +1233,12 @@
 }
 
 @media screen and (min-width: 40em) {
-  #content .tab-content .search-repo details.lang .details-menu {
+  #content .tab-content .search-repo .details details.lang .details-menu {
     left: -160px;
   }
 }
 
-#content .tab-content .search-repo .btn-new {
+#content .tab-content .search-repo .details .btn-new {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1264,17 +1264,17 @@
 }
 
 @media screen and (min-width: 40em) {
-  #content .tab-content .search-repo .btn-new {
+  #content .tab-content .search-repo .details .btn-new {
     margin-left: 15px;
     height: 33px;
   }
 }
 
-#content .tab-content .search-repo .btn-new svg {
+#content .tab-content .search-repo .details .btn-new svg {
   margin-right: 3px;
 }
 
-#content .tab-content .search-repo .btn-new svg path {
+#content .tab-content .search-repo .details .btn-new svg path {
   fill: #ffffff;
 }
 
@@ -1395,34 +1395,6 @@
   margin-right: 2px;
 }
 
-#content .tab-content .repo-list .repo .name-lang .lang-updated p .js {
-  color: #f1e05a;
-}
-
-#content .tab-content .repo-list .repo .name-lang .lang-updated p .css {
-  color: #563d7c;
-}
-
-#content .tab-content .repo-list .repo .name-lang .lang-updated p .scss {
-  color: #c6538c;
-}
-
-#content .tab-content .repo-list .repo .name-lang .lang-updated p .ts {
-  color: #2b7489;
-}
-
-#content .tab-content .repo-list .repo .name-lang .lang-updated p .php {
-  color: #4f5d95;
-}
-
-#content .tab-content .repo-list .repo .name-lang .lang-updated p .python {
-  color: #3572a5;
-}
-
-#content .tab-content .repo-list .repo .name-lang .lang-updated p .html {
-  color: #e34c26;
-}
-
 #content .tab-content .repo-list .repo .name-lang .lang-updated a {
   text-decoration: none;
   color: #586069;
@@ -1437,10 +1409,10 @@
 
 #content .tab-content .repo-list .repo .star .btn-star {
   background-color: #fafbfc;
-  padding: 0 20px;
+  padding: 0 10px;
   font-size: 14px;
   font-weight: 500;
-  color: #24292e;
+  color: #202325;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

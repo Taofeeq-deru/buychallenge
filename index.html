@@ -42,7 +42,7 @@
             <i class="fas fa-plus"></i> <i class="fas fa-caret-down"></i>
           </div>
           <div class="nav-link-end dd-toggler" data-dd="profile-dd">
-            <img src="./avi.jpg" alt="Taofeeq-deru" class="avi" />
+            <img src="" alt="" class="avi my-avi" />
             <i class="fas fa-caret-down"></i>
           </div>
         </div>
@@ -104,8 +104,8 @@
         <li>Explore</li>
         <li>Settings</li>
         <li>
-          <img src="./avi.jpg" alt="Taofeeq-deru" class="avi" />&nbsp;
-          Taofeeq-deru
+          <img src="" alt="" class="avi my-avi" loading="lazy" />&nbsp;
+          <span class="my-username"></span>
         </li>
         <li><i class="fas fa-sign-out-alt"></i>&nbsp; Sign out</li>
       </ul>
@@ -114,8 +114,8 @@
     <div id="content">
       <div class="pc-tabs" role="navigation">
         <div class="name" id="tab-name">
-          <img src="./avi.jpg" alt="Taofeeq-deru" class="avi" />
-          <p>Taofeeq-deru</p>
+          <img src="" alt="" class="avi my-avi" loading="lazy" />
+          <p class="my-username"></p>
         </div>
         <a href="">
           <svg height="17px" width="17px" viewBox="0 0 16 16">
@@ -133,7 +133,7 @@
               d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25 0 00.4.2l1.45-1.087a.25.25 0 01.3 0L8.6 15.7a.25.25 0 00.4-.2v-3.25a.25.25 0 00-.25-.25h-3.5a.25.25 0 00-.25.25z"
             />
           </svg>
-          Repositores <span class="amount">40</span>
+          Repositores <span class="amount repo-count"></span>
         </a>
         <a href="">
           <svg height="17px" width="17px" viewBox="0 0 16 16">
@@ -159,15 +159,15 @@
           <div class="bio">
             <div class="avi-names">
               <div class="avi">
-                <img src="./avi.jpg" alt="Taofeeq-deru" class="avatar" />
+                <img src="" alt="" class="avatar my-avi" loading="lazy" />
                 <div class="set-status-pc">
                   <i class="far fa-smile"></i>
                   <p>Set status</p>
                 </div>
               </div>
               <div class="names" id="bio-name">
-                <h1>Taofeeq Oluderu</h1>
-                <h2>Taofeeq-deru</h2>
+                <h1 class="my-fullname"></h1>
+                <h2 class="my-username"></h2>
               </div>
             </div>
             <div class="set-status">
@@ -175,15 +175,15 @@
               <p>Set status</p>
             </div>
             <div class="desc">
-              <p id="bio-desc">
-                Frontend developer with a little backend knowledge
-              </p>
+              <p id="bio-desc"></p>
             </div>
           </div>
         </div>
         <div class="mobile-tabs" role="navigation">
           <p>Overview</p>
-          <p class="active">Repositores <span class="amount">40</span></p>
+          <p class="active">
+            Repositores <span class="amount repo-count"></span>
+          </p>
           <p>Projects</p>
           <p>Packages</p>
         </div>
@@ -255,33 +255,11 @@
               </button>
             </div>
           </div>
-          <div class="repo-list">
-            <div class="repo">
+          <div class="repo-list" id="repoList">
+            <!-- <div class="repo">
               <div class="name-lang">
                 <div class="name">
                   <a href="">washryte</a>
-                </div>
-                <p class="detail">A laundromat</p>
-                <div class="lang-updated">
-                  <p class="lang"><i class="fas fa-circle js"></i>JavaDcript</p>
-                  <a href=""><i class="far fa-star"></i> 5</a>
-                  <a href=""><i class="fas fa-code-branch"></i> 55</a>
-                  <a href=""
-                    ><i class="fas fa-balance-scale"></i> MIT License</a
-                  >
-                  <p class="updated">Updated yesterday</p>
-                </div>
-              </div>
-              <div class="star">
-                <button class="btn-star">
-                  <i class="far fa-star"></i> Star
-                </button>
-              </div>
-            </div>
-            <div class="repo">
-              <div class="name-lang">
-                <div class="name">
-                  <a href="">detty-dec</a>
                 </div>
                 <p class="forked">
                   Forked from <a href="#" class="link">bla bla </a>
@@ -291,10 +269,13 @@
                   Pariatur atque, modi illo consequuntur eos alias debitis quasi
                 </p>
                 <div class="lang-updated">
-                  <p class="lang"><i class="fas fa-circle php"></i>PHP</p>
+                  <p class="lang">
+                    <i class="fas fa-circle" style="color: blue"></i>JavaScript
+                  </p>
                   <a href=""><i class="far fa-star"></i> 5</a>
-                  <a href=""><i class="fas fa-code-branch"></i> 3</a>
-                  <p class="updated">Updated on 6 Jun</p>
+                  <a href=""><i class="fas fa-code-branch"></i> 55</a>
+                  <p><i class="fas fa-balance-scale"></i> MIT License</p>
+                  <p class="updated">Updated yesterday</p>
                 </div>
               </div>
               <div class="star">
@@ -302,84 +283,7 @@
                   <i class="far fa-star"></i> Star
                 </button>
               </div>
-            </div>
-            <div class="repo">
-              <div class="name-lang">
-                <div class="name">
-                  <a href="">weaterApp</a>
-                </div>
-                <p class="detail">Simple weather map</p>
-                <div class="lang-updated">
-                  <p class="lang"><i class="fas fa-circle html"></i>HTML</p>
-                  <p class="updated">Updated on 16 Feb</p>
-                </div>
-              </div>
-              <div class="star">
-                <button class="btn-star">
-                  <i class="far fa-star"></i> Star
-                </button>
-              </div>
-            </div>
-            <div class="repo">
-              <div class="name-lang">
-                <div class="name">
-                  <a href="">django</a>
-                </div>
-                <div class="lang-updated">
-                  <p class="lang"><i class="fas fa-circle python"></i>Python</p>
-                  <p class="updated">Updated on 5 Jan</p>
-                </div>
-              </div>
-              <div class="star">
-                <button class="btn-star">
-                  <i class="far fa-star"></i> Star
-                </button>
-              </div>
-            </div>
-            <div class="repo">
-              <div class="name-lang">
-                <div class="name">
-                  <a href="">ant-design</a>
-                </div>
-                <p class="forked">
-                  Forked from <a href="#" class="link">bla bla </a>
-                </p>
-                <p class="detail">A UI Design Language and React UI Library</p>
-                <div class="lang-updated">
-                  <p class="lang"><i class="fas fa-circle ts"></i>TypeScript</p>
-                  <a href=""><i class="fas fa-code-branch"></i> 5000</a>
-                  <a href=""
-                    ><i class="fas fa-balance-scale"></i> MIT License</a
-                  >
-                  <p class="updated">Updated on 5 Mar</p>
-                </div>
-              </div>
-              <div class="star">
-                <button class="btn-star">
-                  <i class="far fa-star"></i> Star
-                </button>
-              </div>
-            </div>
-            <div class="repo">
-              <div class="name-lang">
-                <div class="name">
-                  <a href="">team-4</a>
-                </div>
-                <p class="forked">
-                  Forked from <a href="#" class="link">bla bla </a>
-                </p>
-                <div class="lang-updated">
-                  <p class="lang"><i class="fas fa-circle css"></i>CSS</p>
-                  <a href=""><i class="fas fa-code-branch"></i> 5</a>
-                  <p class="updated">Updated on 13 October 2019</p>
-                </div>
-              </div>
-              <div class="star">
-                <button class="btn-star">
-                  <i class="far fa-star"></i> Star
-                </button>
-              </div>
-            </div>
+            </div> -->
           </div>
           <div class="buttons">
             <button class="btn-prev">Previous</button>
@@ -407,5 +311,6 @@
     </footer>
 
     <script src="scripts/others.js"></script>
+    <script src="scripts/api.js"></script>
   </body>
 </html>
