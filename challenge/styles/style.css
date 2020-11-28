@@ -307,8 +307,8 @@
       -ms-flex-align: inherit;
           align-items: inherit;
   border-top: 0;
-  -webkit-box-shadow: 0px 0px 10px 2px rgba(229, 229, 229, 0.5);
-          box-shadow: 0px 0px 10px 2px rgba(229, 229, 229, 0.5);
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(229, 229, 229, 0.5);
+          box-shadow: 0px 0px 10px 0px rgba(229, 229, 229, 0.5);
 }
 
 .dropdown .dd-menu a {
@@ -731,8 +731,8 @@
   }
   #content .bio .avi-names .avi .set-status-pc {
     position: absolute;
-    bottom: 15px;
-    right: 15px;
+    bottom: 30px;
+    left: 135px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -755,10 +755,10 @@
   }
 }
 
-@media screen and (min-width: 40em) and (min-width: 70.5em) {
+@media screen and (min-width: 40em) and (min-width: 60em) {
   #content .bio .avi-names .avi .set-status-pc {
-    bottom: 25px;
-    right: 25px;
+    bottom: 35px;
+    left: 80%;
   }
 }
 
@@ -1297,7 +1297,7 @@
 }
 
 #content .tab-content .repo-list .repo {
-  padding: 20px 0;
+  padding: 25px 0;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
