@@ -126,6 +126,7 @@
       }
       .avi {
         margin-right: 20px;
+        border-radius: 100%;
         img.avatar {
           width: 55px;
           height: 55px;
@@ -462,9 +463,12 @@
             a {
               color: $blue;
               font-weight: 600;
-              font-size: $fa-xl;
+              font-size: $fa-lg;
               margin: 0 15px 0 0;
               text-decoration: none;
+              @include responsive($smd) {
+                font-size: $fa-xl;
+              }
               &:hover {
                 text-decoration: underline;
               }

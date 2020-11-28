@@ -1,0 +1,18 @@
+@import "./variables";
+@import "./mixins";
+
+.error {
+  background-image: url(../error.svg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 20px 0;
+  width: 100vw;
+  height: 100vh;
+  h1 {
+    text-align: center;
+    color: $dark-sec;
+    font-weight: 500;
+    font-size: $fa-md;
+  }
+}

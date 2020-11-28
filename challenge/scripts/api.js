@@ -1,4 +1,4 @@
-//require("dotenv").config();
+const rootBody = document.querySelector("body");
 
 const content = {
   query: `{
@@ -39,15 +39,12 @@ const content = {
 };
 
 const body = JSON.stringify(content);
-const url = "https://api.github.com/graphql";
-const token = process.env.API_KEY || config.API_KEY;
-//const token = config.API_KEY;
+const url = "https://buychallenge.netlify.app/api/fun";
 
 const options = {
   method: "post",
   headers: {
     "Content-type": "application/json",
-    Authorization: `Bearer ${token}`,
   },
   body,
 };
@@ -63,8 +60,13 @@ async function fetchAPI() {
   await fetch(url, options)
     .then((resp) => resp.json())
     .then((data) => {
-      console.log(data);
-      const { avatarUrl, login, name, bio, repositories } = data.data.viewer;
+      const {
+        avatarUrl,
+        login,
+        name,
+        bio,
+        repositories,
+      } = data.data.data.viewer;
       avis.forEach((avi) => {
         avi.setAttribute("src", avatarUrl);
         avi.setAttribute("alt", login);
@@ -219,6 +221,7 @@ async function fetchAPI() {
     })
     .catch((err) => {
       console.log(err);
+      rootBody.innerHTML = `<div class="error"><h1>Please try again later</h1></div>`;
     });
 }
 
