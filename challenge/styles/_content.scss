@@ -457,13 +457,13 @@
         @include flex(row nowrap, space-between, center);
         @include borderbottom();
         .name-lang {
-          max-width: 60%;
+          max-width: 70%;
           .name {
             @include flex(row nowrap, inherit, flex-end);
             a {
               color: $blue;
               font-weight: 600;
-              font-size: $fa-lg;
+              font-size: $fa-mxl;
               margin: 0 15px 0 0;
               text-decoration: none;
               @include responsive($smd) {
