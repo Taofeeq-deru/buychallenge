@@ -434,6 +434,10 @@
           font-size: $fa-sm;
           font-weight: 500;
           margin-left: auto;
+          &:hover {
+            cursor: pointer;
+            background-color: $green-sec;
+          }
           @include responsive($md) {
             margin-left: 15px;
             height: 33px;
