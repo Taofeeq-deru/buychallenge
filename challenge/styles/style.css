@@ -546,14 +546,14 @@
   }
 }
 
-#content .pc-tabs a {
+#content .pc-tabs p.tab-link {
   font-size: 14px;
   padding: 15px;
   margin: 0;
   -ms-flex-negative: 0;
       flex-shrink: 0;
   color: #24292e;
-  text-decoration: none;
+  cursor: pointer;
   border-bottom: 2px solid transparent;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -570,29 +570,28 @@
           align-items: center;
 }
 
-#content .pc-tabs a:hover {
-  text-decoration: none;
+#content .pc-tabs p.tab-link:hover {
   border-bottom: 2px solid #cfcece;
 }
 
-#content .pc-tabs a svg {
+#content .pc-tabs p.tab-link svg {
   margin-right: 5px;
 }
 
-#content .pc-tabs a svg path {
+#content .pc-tabs p.tab-link svg path {
   fill: #9b9b9b;
 }
 
-#content .pc-tabs a.active {
+#content .pc-tabs p.tab-link.active {
   font-weight: 600;
   border-bottom: 2px solid #f9826c;
 }
 
-#content .pc-tabs a.active svg path {
+#content .pc-tabs p.tab-link.active svg path {
   fill: #24292e;
 }
 
-#content .pc-tabs a.active .amount {
+#content .pc-tabs p.tab-link.active .amount {
   font-size: 12px;
   font-weight: 400;
   border-radius: 10px;
@@ -1404,6 +1403,7 @@
 }
 
 #content .tab-content .repo-list .repo .name-lang .lang-updated a:hover {
+  cursor: pointer;
   text-decoration: none;
   color: #0366d6;
 }
