@@ -1263,6 +1263,11 @@
   margin-left: auto;
 }
 
+#content .tab-content .search-repo .details .btn-new:hover {
+  cursor: pointer;
+  background-color: #157c33;
+}
+
 @media screen and (min-width: 40em) {
   #content .tab-content .search-repo .details .btn-new {
     margin-left: 15px;
