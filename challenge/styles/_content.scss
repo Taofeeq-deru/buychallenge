@@ -46,17 +46,16 @@
     @include responsive($xl) {
       padding: 0 var(--screen-x);
     }
-    a {
+    p.tab-link {
       font-size: $fa-sm;
       padding: 15px;
       margin: 0;
       flex-shrink: 0;
       color: $dark-sec;
-      text-decoration: none;
+      cursor: pointer;
       border-bottom: 2px solid transparent;
       @include flex(row nowrap, center, center);
       &:hover {
-        text-decoration: none;
         border-bottom: 2px solid $lightgrey;
       }
       svg {
@@ -66,7 +65,7 @@
         }
       }
     }
-    a.active {
+    p.tab-link.active {
       font-weight: 600;
       border-bottom: 2px solid $orangish;
       svg path {
@@ -506,6 +505,7 @@
               font-size: $fa-xs;
               margin: 0 20px 3px 0;
               &:hover {
+                cursor: pointer;
                 text-decoration: none;
                 color: $blue;
               }
