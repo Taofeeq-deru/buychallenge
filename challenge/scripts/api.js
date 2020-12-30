@@ -39,7 +39,7 @@ const content = {
 };
 
 const body = JSON.stringify(content);
-const url = "https://buychallenge.netlify.app/api/fun";
+const url = "https://myrepoclone.netlify.app/api/fun";
 
 const options = {
   method: "post",
